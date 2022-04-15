@@ -10,6 +10,38 @@
   
 }
 
+@keyframes move1 {
+  0%{
+    top:60px;
+    left: 110px;
+  }
+  50%{
+    top:60px;
+    left: 175px;
+  }
+
+  100%{
+    top:60px;
+    left: 110px;
+  }
+}
+
+@keyframes move2 {
+  0%{
+    top:100px;
+    left: 250px;
+  }
+  50%{
+    top:100px;
+    left: 180px;
+  }
+
+  100%{
+    top:100px;
+    left: 250px;
+  }
+}
+
 
 
 
@@ -48,6 +80,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      
       &>div{
         display: flex;
         flex-direction: column;
@@ -79,8 +113,7 @@
         border-radius: 40px;
         background-color: rgba(255, 0, 0, 0.618);
         position: relative;
-        top:60px;
-        left: 110px;
+        animation: 2s move1 infinite;
       }
       
       &>div:nth-child(2){
@@ -89,11 +122,19 @@
         border-radius: 30px;
         background-color: rgba(17, 255, 0, 0.618);
         position: relative;
-        top:100px;
-        left: 250px;
+        animation:2s move2 infinite;
       }
-      
 
+      &>div:nth-child(3){
+        width:150px;
+        height:80px;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.223);
+        backdrop-filter: blur(5px);
+        position: relative;
+        top:-15px;
+        left: 130px;
+      }
       
       
       
