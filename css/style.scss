@@ -1,22 +1,60 @@
 *{ margin:0; padding:0;}
 
-#container{
-  width:100vw;
-  height:100vh;
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// #container{
+//   width:100vw;
+//   height:100vh;
+//   background-color: aliceblue;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
   
-}
+// }
 
 #root{
-
   width:428px;
-  height:926px;
+  height:1000px;
   background-color:black;
 
+  // sticky라는 새로운 속성을 써봤다
+  // 강사님의 의도가 뭘까
+  // 화면을 겁은색으로 꽉차게 만들고 싶은데 #Q1만큼 늘어난다 이 빈 자리를 지우려면 어떻게 해야할까
+    &>div{
+      border:1px solid white;
+      width:100%;
+    }
 
-  
-  
+    // 위의 점 세개
+
+    &>div:nth-child(1){
+      height: 200px;
+    }
+
+    // 중간 움직이는 점
+    &>div:nth-child(2){
+      height:300px;
+      
+    }
+
+    // 글씨
+    
+    &>div:nth-child(3){
+      height:100px;
+    }
+    
+
+    // 블록
+    &>div:nth-child(4){
+      height:400px;
+      z-index: 1;
+    }
+    
+
+    // sticky
+    &>div:nth-child(5){
+      height:100px;
+      position: sticky;
+      // position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
 }
