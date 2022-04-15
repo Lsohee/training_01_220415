@@ -1,14 +1,17 @@
 *{ margin:0; padding:0;}
 
-// #container{
-//   width:100vw;
-//   height:100vh;
-//   background-color: aliceblue;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+#container{
+  width:100vw;
+  height:100vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-// }
+}
+
+
+
 
 #root{
   width:428px;
@@ -16,11 +19,41 @@
   background-color:black;
 
   // sticky라는 새로운 속성을 써봤다
-  // 강사님의 의도가 뭘까
-  // 화면을 겁은색으로 꽉차게 만들고 싶은데 #Q1만큼 늘어난다 이 빈 자리를 지우려면 어떻게 해야할까
+  // 강사님이 sticky를 써서 만들라는 촐력이 뭘까 
+  // 위로 올릴때 밑에 붙어 있으라는 것일까 
+  // 아래로 내릴 떄 밑에 붙어 있으라는 의미일까
+
+
+
+  // 모바일 화면을 검은색으로 꽉차게 만들고 싶은데 빈 공간이 #Q1만큼 늘어난다 이 빈 자리를 지우려면 어떻게 해야할까
+
+
+  // --> 일단 다른걸 해보기로 함
     &>div{
       border:1px solid white;
       width:100%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height:100px;
+        width:100%;
+
+
+        &>div{
+          width:10px;
+          height:10px;
+          border-radius: 5px;
+          background-color: rgba(255, 255, 255, 0.465);
+        }
+        
+
+      }
     }
 
     // 위의 점 세개
